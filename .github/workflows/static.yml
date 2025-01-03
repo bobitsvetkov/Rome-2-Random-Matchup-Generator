@@ -29,14 +29,14 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: './Rome 2 Matchup generator/package-lock.json'
+          cache-dependency-path: './Random Matchup Generator/package-lock.json'
 
       - name: Install dependencies
-        working-directory: ./Rome 2 Matchup generator
+        working-directory: ./Random Matchup Generator
         run: npm install
 
       - name: Build
-        working-directory: ./Rome 2 Matchup generator
+        working-directory: ./Random Matchup Generator
         run: npm run build
 
       - name: Setup Pages
@@ -45,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './Rome 2 Matchup generator/dist'
+          path: './Random Matchup Generator/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
